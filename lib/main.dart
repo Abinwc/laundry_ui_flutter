@@ -13,22 +13,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  List<String> listPopularFootballClubs = [];
-
-  @override
-  // ignore: must_call_super
-  initState() {
-    super.initState();
-    listPopularFootballClubs = [
-      'Regular Wash',
-      'Regular Wash + Ironing',
-      'Wash And Press',
-      'Dry Cleaning',
-      'Just Ironing'
-    ];
-  }
-
   final List<bool> myBool = <bool>[false, false, false, false, false];
+  List<String> listPopularFootballClubs = [
+    'Regular Wash',
+    'Regular Wash + Ironing',
+    'Wash And Press',
+    'Dry Cleaning',
+    'Just Ironing'
+  ];
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
