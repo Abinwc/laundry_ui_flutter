@@ -80,13 +80,19 @@ class _MyAppState extends State<MyApp> {
                     },
                     child: Container(
                         height: 56,
-                        child: Card(
+                        decoration: BoxDecoration(
                           color:
                               myBool[index] ? Colors.white : Colors.transparent,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(7)),
+                          border: Border.all(
+                            color: Colors.white,
+                            width: 1,
                           ),
-                          child: Center(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
                             child: Text(listPopularFootballClubs[index],
                                 style: TextStyle(
                                     color: myBool[index]
@@ -107,27 +113,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
-
-
-//  ListView.separated(
-//                 scrollDirection: Axis.vertical,
-//                 shrinkWrap: true,
-//                 padding: const EdgeInsets.all(8),
-//                 itemCount: entries.length,
-//                 itemBuilder: (BuildContext context, int index) {
-//                   return Container(
-//                     height: 50,
-//                     decoration: BoxDecoration(
-//                         border: Border.all(color: Colors.white),
-//                         borderRadius: BorderRadius.circular(10)),
-//                     child: Center(
-//                         child: Text(
-//                       'Entry ${entries[index]}',
-//                       style: TextStyle(color: Colors.white),
-//                     )),
-//                   );
-//                 },
-//                 separatorBuilder: (BuildContext context, int index) =>
-//                     const Divider(),
-//               ),
